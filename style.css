@@ -1,0 +1,37 @@
+/* när man har anget endast body och container så ser man frame. För att täcka helt 
+ska man ange * då anropas hela framet i webbsidan */
+
+*{
+    margin: 0;
+}
+body{
+    background-color: aquamarine;
+}
+
+.container{
+    background-color: salmon;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+/*     flex-direction: column;  *//* denn gör vertikala läge */
+}
+
+.item-1{
+    width: 200px;
+    height: 200px;
+    background-color: seagreen;
+}
+
+.item-2{
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+}
+
+.item-3{
+    width: 450px;
+    height: 450px;
+    background-color: lightgray;
+}
