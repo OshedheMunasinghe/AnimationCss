@@ -16,28 +16,31 @@ body{
     justify-content: space-evenly;
     flex-direction: column;
 }
-.text:hover{
-    color: tan;
-}
-
-/* cursor changing that you canot touch the button */
-.button:disabled{
-    cursor: not-allowed;
-}
-
-.input:focus{
-    border: rgb(68, 17, 68);
-
-    padding: 5px;
-}
-
-/* anropa listor */
-.list-item:first-child{
+.text{
     color: white;
+
 }
-.list-item:nth-child(2){
-    color: teal;
-}
-.list-item:last-child{
+
+.text::before{
+    content: "add before";
     color: yellowgreen;
+}
+
+.text::after{
+    content: "add after";
+    color: yellowgreen;
+}
+
+.text-2{
+    color: white;
+    font-size: 100px;
+    position: relative;
+    overflow: hidden; /*ett hint hur man får den till animation! */
+}
+
+.text-2::before{
+    content: "Text";
+    color: aqua;
+    position: absolute;
+    left: -60%; /*denna som kommer ut från overlow hidden till bokstäver, först step animatrion*/
 }
