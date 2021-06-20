@@ -17,58 +17,38 @@ body{
 }
 
 .button{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
+    border: 2px solid #333;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+position: relative;
+margin: 10px;
+overflow: hidden;
 }
 
-img{
-    width: 30%;
-    height: 30%;
-    
-}
-
-.circle{
-    width: 50%;
-    height: 50%;
+.fill{
+    width: 120%;
+    height: 120%;
+    background-color: #333;
     border-radius: 50%;
     position: absolute;
-    opacity: 0;
+    bottom: -50px;
+    left: -50px;
+    transition: all .5s ease;
 }
 
-.circle-1{
-    border: 1px solid rgb(157, 157, 241);
-    transition: opacity 1s ease;
-}
-.circle-2{
-    width: 60%;
-    height: 60%;    
-    border: 1.5px solid rgb(157, 157, 241);
-     transition: opacity 1s 0.2s ease, opacity 0.5s ease;
-}
-.circle-3{
-    border: 2px dashed tomato;  
-    transition: transform 2s ease;
+.button:hover .fill{
+    transform: translate(45px,-45px)
 }
 
-.facebook:hover .circle-1,
-.facebook:hover .circle-2{
-    opacity: 1;
+.button:hover .icon{
+    color: white;
 }
 
-.instagram:hover .circle-3{
-    opacity: 1;
-    transform: rotate(360deg)
-}
-
-.twitter{
-   transition: all 1s ease-out;
-}
-
-.twitter:hover{
- transform: rotate(360deg)
+.icon{
+    z-index: 2;
 }
