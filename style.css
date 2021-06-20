@@ -1,54 +1,104 @@
-/* när man har anget endast body och container så ser man frame. För att täcka helt 
-ska man ange * då anropas hela framet i webbsidan */
 
 *{
     margin: 0;
 }
+
 body{
-    background-color: aquamarine;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: lightskyblue;
 }
 
 .container{
-    background-color: whitesmoke;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    border: 2px solid #333;
 display: flex;
 align-items: center;
 justify-content: center;
-border-radius: 20px;
-position: relative;
-margin: 10px;
-overflow: hidden;
+transform: rotate(-25deg) skew(25deg);
 }
 
-.fill{
-    width: 120%;
-    height: 120%;
+ .button{
+    width: 60px;
+    height: 60px;
+    /* background-color: black; */
+    margin: 20px;
+    position: relative;
+   
+}
+.button::before{
+    content: "";
+    width: 100%;
+    height: 10px;
     background-color: #333;
-    border-radius: 50%;
     position: absolute;
-    bottom: -50px;
-    left: -50px;
-    transition: all .5s ease;
+    bottom: -10px;
+    left: 0;
+    transform: skewX(-45deg);
+    transform-origin: top;
+}
+/* why arent we writing in content? what is content? ask it in udemy */
+.button::after{
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    transform: skewY(-45deg);
+    transform-origin: right;
 }
 
-.button:hover .fill{
-    transform: translate(45px,-45px)
-}
-
-.button:hover .icon{
+span{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(83, 82, 82);
+    position: absolute;
+    top: 0;
+    left: 0;
+     display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    font-size: 30px;
+    transition: all 1.5s ease-out;
+    border: 0.5px solid #333;
+}
+ 
+.button:hover span:nth-child(5){
+    transform: translate(40px,-40px);
 }
 
-.icon{
-    z-index: 2;
+.button:hover span:nth-child(4){
+    transform: translate(30px,-30px);
+    opacity: 0.8;
+}
+.button:hover span:nth-child(3){
+    transform: translate(20px,-20px);
+    opacity: 0.6;
+}
+.button:hover span:nth-child(2){
+    transform: translate(10px,-10px);
+    opacity: 0.4;
+}
+.button:hover span:nth-child(1){
+    transform: translate(10px,-10px);
+    opacity: 0.2;
+}
+
+.button:nth-child(1):hover span{
+    background-color: royalblue;
+
+}
+.button:nth-child(2):hover span{
+    background-color: tomato;
+
+}
+.button:nth-child(3):hover span{
+    background-color: dodgerblue;
+
+}
+.button:nth-child(4)):hover span{
+    background-color: red;
+
 }
