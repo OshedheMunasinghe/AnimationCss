@@ -13,34 +13,21 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: center;
 }
-.text{
-    color: white;
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    transition: all 1s ease; /*ease gör naimation smooth. All gör att den animerar varje hörna. 1s är duration, kolla på morzilla documentet*/
 
 }
 
-.text::before{
-    content: "add before";
-    color: yellowgreen;
+.item:hover{
+  /*  transform: translate(50px,50px); */
+/*   transform: rotate(90deg); */
+/* transform: scale(5); */
+/* transform: skew(50deg); */ /*den drar ut som rektangulär*/
 }
 
-.text::after{
-    content: "add after";
-    color: yellowgreen;
-}
-
-.text-2{
-    color: white;
-    font-size: 100px;
-    position: relative;
-    overflow: hidden; /*ett hint hur man får den till animation! */
-}
-
-.text-2::before{
-    content: "Text";
-    color: aqua;
-    position: absolute;
-    left: -60%; /*denna som kommer ut från overlow hidden till bokstäver, först step animatrion*/
-}
