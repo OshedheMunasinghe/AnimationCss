@@ -36,7 +36,6 @@ transform: rotate(-25deg) skew(25deg);
     transform: skewX(-45deg);
     transform-origin: top;
 }
-/* why arent we writing in content? what is content? ask it in udemy */
 .button::after{
     content: "";
     width: 10px;
