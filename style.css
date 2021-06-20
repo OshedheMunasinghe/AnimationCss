@@ -9,44 +9,66 @@ body{
 }
 
 .container{
-    background-color: salmon;
+    background-color: whitesmoke;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 100px;
 }
 
-
-
-.x{
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-}
-
-.y{
-    width: 1px;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 50%;
-}
-
-.item{
+.button{
     width: 100px;
     height: 100px;
-    background-color: gold;
-    transition: all 1s ease; /*ease gör naimation smooth. All gör att den animerar varje hörna. 1s är duration, kolla på morzilla documentet*/
-    transform-origin: bottom;
-    transform-origin: top left; /*precisa som animation.css hur dom har byggt exemple*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
 }
 
-.item:hover{
-transform: rotate(50deg)
+img{
+    width: 30%;
+    height: 30%;
+    
 }
-/*skapa kordinater*/
 
+.circle{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.circle-1{
+    border: 1px solid rgb(157, 157, 241);
+    transition: opacity 1s ease;
+}
+.circle-2{
+    width: 60%;
+    height: 60%;    
+    border: 1.5px solid rgb(157, 157, 241);
+     transition: opacity 1s 0.2s ease, opacity 0.5s ease;
+}
+.circle-3{
+    border: 2px dashed tomato;  
+    transition: transform 2s ease;
+}
+
+.facebook:hover .circle-1,
+.facebook:hover .circle-2{
+    opacity: 1;
+}
+
+.instagram:hover .circle-3{
+    opacity: 1;
+    transform: rotate(360deg)
+}
+
+.twitter{
+   transition: all 1s ease-out;
+}
+
+.twitter:hover{
+ transform: rotate(360deg)
+}
