@@ -90,17 +90,6 @@ span{
 
 }
 
-/* 
-.fill{
-    width: 120%;
-    height: 120%;
-    background-color: #333;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -50px;
-    left: -50px;
-    transition: all .5s ease;
-} */
 
 .button:nth-child(2):hover span{
     background-color: tomato;
